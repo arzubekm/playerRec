@@ -13,8 +13,10 @@
         </div>
       </nav>
       <br>
-      <form action = "https://player-rec.herokuapp.com/player" method = "POST">
+      <form action = "http://127.0.0.1:5000/player" method = "POST">
          <!-- <p><input type = "submit" value = "submit" /></p> -->
+         <!-- http://127.0.0.1:5000/player
+         https://player-rec.herokuapp.com/player -->
          <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"><h4>Football Player Recommendation System.</h4> <br>The model uses <b>K-Nearest Neighbors (KNN)</b> algorithm to find similar players based on <a href="https://www.kaggle.com/stefanoleone992/fifa-21-complete-player-dataset?select=players_21.csv">'FIFA 21 kaggle'</a> dataset.</br></label>
           <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" type = "text" name = "title" placeholder="Enter a 'FIFA 21' player name.">
