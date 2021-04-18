@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Player Recommendation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <a href="{{ url_for('homepage') }}"<span class="navbar-brand mb-0 h1">Playerec</span></a>
+        </div>
+      </nav>
+      <br>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Recommended players</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for each in list %}
+          <tr>
+            <td>{{ each }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <!-- {{ list }} -->
+      <!-- {% for each in list %}
+      <h4>{{ each.Name }}</h4>
+      {% endfor %} -->
+    </div>
+  </body>
+</html>

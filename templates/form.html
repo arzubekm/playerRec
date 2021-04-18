@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Which player you want to replace?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <a href="{{ url_for('homepage') }}"<span class="navbar-brand mb-0 h1">Playerec</span></a>
+        </div>
+      </nav>
+      <br>
+      <form action = "http://127.0.0.1:5000/player" method = "POST">
+         <!-- <p><input type = "submit" value = "submit" /></p> -->
+         <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"><h4>Football Player Recommendation System.</h4> <br>The model uses <b>K-Nearest Neighbors (KNN)</b> algorithm to find similar players based on <a href="https://www.kaggle.com/stefanoleone992/fifa-21-complete-player-dataset?select=players_21.csv">'FIFA 21 kaggle'</a> dataset.</br></label>
+          <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" type = "text" name = "title" placeholder="Enter a 'FIFA 21' player name.">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
