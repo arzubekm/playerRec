@@ -3,11 +3,11 @@ import joblib
 from sklearn.neighbors import NearestNeighbors
 
 def get_data():
-    data = pd.read_csv('players_21_clean.csv')
+    data = pd.read_csv('half_players_21_clean.csv')
     return data
 
 def load_model():
-    return joblib.load('knnplayer.pkl')
+    return joblib.load('half-knnplayer.pkl')
 
 def results(player):
     data = get_data()
