@@ -1,5 +1,6 @@
 # playerec
-Player recommendation (playerec) project is build using [Flask](http://flask.pocoo.org/). It is a simple FIFA21 player recommendation application which shows five similar players that could replace your inputted player (overall rating >= 66). The application model uses K-nearest algorithm (KNN) based on [FIFA21 kaggle] (https://www.kaggle.com/stefanoleone992/fifa-21-complete-player-dataset?select=players_21.csv) dataset.
+Player recommendation (playerec) project is build using [Flask](http://flask.pocoo.org/). It is a simple FIFA21 player recommendation application which shows five similar players that could replace your inputted player (overall rating >= 66). 
+The application model uses K-nearest algorithm (KNN) based on [FIFA21 kaggle](https://www.kaggle.com/stefanoleone992/fifa-21-complete-player-dataset?select=players_21.csv) dataset.
 
 ## Setup
 ### Install and initialize virtual environment
