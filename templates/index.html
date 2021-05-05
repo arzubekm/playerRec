@@ -6,10 +6,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   </head>
   <body>
+
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+      /* base styles */
+      * {
+        margin: 0;
+        font-family: "Quicksand";
+        color: #333;
+      }
+
+      .navbar h1 {
+        color: #f1356d;
+      }
+
+      .navbar .links {
+        margin-left: auto;
+      }
+      .navbar a {
+        margin-left: 8px;
+        text-decoration: none;
+        padding: 6px;
+        color:#8141f5;
+        font-weight: bolder;
+      }
+      .navbar a:hover {
+        color: #f1356d;
+      }
+    </style>
+
     <div class="container">
-      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <nav class="navbar navbar-light" style="background-color: #FFFFFF; border-bottom: 1px solid #f2f2f2;">
         <div class="container-fluid">
-          <a href="{{ url_for('homepage') }}"<span class="navbar-brand mb-0 h1">Playerec</span></a>
+          <a href="{{ url_for('homepage') }}"<span class="navbar-brand mb-0 h1" style="color:#8141f5">playerec</span></a>
+          <div class="links">
+    				<a href="/">Home</a>
+    				<a href="/create">Source Code</a>
+    			</div>
         </div>
       </nav>
       <br>
@@ -27,10 +60,6 @@
           {% endfor %}
         </tbody>
       </table>
-      <!-- {{ list }} -->
-      <!-- {% for each in list %}
-      <h4>{{ each.Name }}</h4>
-      {% endfor %} -->
     </div>
   </body>
 </html>
