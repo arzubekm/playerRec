@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>Which player you want to replace?</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1273796310584492036/VOQmVFXj_400x400.jpg">
   </head>
   <body>
 
@@ -35,6 +37,7 @@
       .navbar a:hover {
         color: #f1356d;
       }
+
     </style>
 
     <div class="container">
@@ -43,22 +46,34 @@
           <a href="{{ url_for('homepage') }}"<span class="navbar-brand mb-0 h1" style="color:#8141f5;">playerec</span></a>
           <div class="links">
     				<a href="/">Home</a>
-    				<a href="/create">Source Code</a>
+    				<a href="https://github.com/arzubekm/playerRec">Source Code</a>
     			</div>
         </div>
       </nav>
       <br>
-      <form action = "https://player-rec.herokuapp.com/player" method = "POST">
+      <form action = "https://player-rec.herokuapp.com/player" method = "POST" autocomplete="on">
          <!-- <p><input type = "submit" value = "submit" /></p> -->
          <!-- http://127.0.0.1:5000/player
          https://player-rec.herokuapp.com/player -->
          <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"><h4 style="font-weight: bolder;">Football Player Recommendation System.</h4> <br>The model uses <b>K-Nearest Neighbors (KNN)</b> algorithm to find similar players (overall rating >= 66) based on <a href="https://www.kaggle.com/stefanoleone992/fifa-21-complete-player-dataset?select=players_21.csv">'FIFA 21 kaggle'</a> dataset.</br></label>
-          <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" type = "text" name = "title" placeholder="Enter a 'FIFA 21' player name.">
+          <input class="form-control autocomplete" id="exampleInputEmail1" aria-describedby="emailHelp" type = "text" name = "title" placeholder="Enter a 'FIFA 21' player name.">
           <div id="emailHelp" class="form-text"></div>
         </div>
         <button type="submit" class="btn btn-primary" value="submit" style="background: #8141f5; border: #8141f5;">Submit</button>
       </form>
+
+      <script>
+        $( function() {
+        var player_names = [
+            {% for player in long_names %}
+                "{{player}}",
+            {% endfor %}
+        ];
+        $( "#exampleInputEmail1" ).autocomplete({ source: player_names });
+        });
+      </script>
+
     </div>
   </body>
 </html>

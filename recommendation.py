@@ -12,7 +12,7 @@ def load_model():
 def results(player):
     data = get_data()
 
-    index = data[data['short_name']==player].index.tolist()[0]
+    index = data[data['long_name']==player].index.tolist()[0]
 
     model = load_model()
 
