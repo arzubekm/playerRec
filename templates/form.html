@@ -34,6 +34,7 @@
         padding: 6px;
         color:#8141f5;
         font-weight: bolder;
+        font-size: 30px;
       }
       .navbar a:hover {
         color: #f1356d;
@@ -47,7 +48,7 @@
           <a href="{{ url_for('homepage') }}"<span class="navbar-brand mb-0 h1" style="color:#8141f5;">playerec</span></a>
           <div class="links">
     				<a href="https://github.com/arzubekm/playerRec" target="_blank">
-              <i class="fa fa-github" style="font-size:28px; color:#8141f5;"></i>
+              <i class="fa fa-github" style="font-size:34px; color:#8141f5;"></i>
             </a>
     			</div>
         </div>
@@ -58,7 +59,11 @@
          <!-- http://127.0.0.1:5000/player
          https://player-rec.herokuapp.com/player -->
          <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"><h4 style="font-weight: bolder;">Football Player Recommendation System.</h4> <br>The model uses <b>K-Nearest Neighbors (KNN)</b> algorithm to find similar players (overall rating >= 66) based on <a href="https://www.kaggle.com/stefanoleone992/fifa-21-complete-player-dataset?select=players_21.csv">'FIFA 21 kaggle'</a> dataset.</br></label>
+          <!-- <img src="https://pbs.twimg.com/profile_images/1273796310584492036/VOQmVFXj_400x400.jpg" alt="FIFA21" style="width: 120px; height:120px;"> -->
+          <label for="exampleInputEmail1" class="form-label">
+            <h4 style="font-weight: bolder;">Football Player Recommendation System.</h4>
+            <br>The model uses <b>K-Nearest Neighbors (KNN)</b> algorithm to find similar players (overall rating >= 66) based on <a href="https://www.kaggle.com/stefanoleone992/fifa-21-complete-player-dataset?select=players_21.csv">'FIFA 21 kaggle'</a> dataset.</br>
+          </label>
           <input class="form-control autocomplete" id="exampleInputEmail1" aria-describedby="emailHelp" type = "text" name = "title" placeholder="Enter a 'FIFA 21' player name.">
           <div id="emailHelp" class="form-text"></div>
         </div>
